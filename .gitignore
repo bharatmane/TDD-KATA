@@ -3,3 +3,13 @@
 ################################################################################
 
 /Queue/BM.Queue/obj
+/Queue/BM.Queue/bin/Debug/netstandard2.0
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite
+/.vs/Queque/DesignTimeBuild/.dtbcache
+/.vs/ProjectSettings.json
+/.vs/BM.TDDKata/DesignTimeBuild/.dtbcache
+/Queue/BM.Queue.Test/obj
+/Queue/BM.Queue.Test/bin/Debug/netcoreapp2.1
+/.vs/BM.TDDKata/v15/Server/sqlite3
+/.vs/BM.TDDKata/v15
