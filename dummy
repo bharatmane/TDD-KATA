@@ -46,3 +46,13 @@ webpack: {
       return webpackConfig;
     },
   },
+ webpackConfig.optimization.runtimeChunk = {
+        name: () => `runtime.[contenthash]`, // Generates runtime.[contenthash].js
+      };
+
+      // Customize output filenames
+      webpackConfig.output = {
+        ...webpackConfig.output,
+        filename: '[name].[contenthash].js', // Main file names
+        chunkFilename: '[name].[contenthash].chunk.js', // Dynamic imports
+      };
