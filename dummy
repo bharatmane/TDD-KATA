@@ -21,3 +21,6 @@ module.exports = {
     },
   },
 };
+plugins: [
+  path.resolve(__dirname, 'docusaurus-plugin-webpack-runtime'),
+],
