@@ -24,3 +24,25 @@ module.exports = {
 plugins: [
   path.resolve(__dirname, 'docusaurus-plugin-webpack-runtime'),
 ],
+
+
+webpack: {
+    configure: (webpackConfig) => {
+      // Override runtime chunk naming
+      webpackConfig.optimization = {
+        ...webpackConfig.optimization,
+        runtimeChunk: {
+          name: () => `runtime.[contenthash]`, // Generates runtime.[contenthash].js
+        },
+      };
+
+      // Ensure consistent output filenames
+      webpackConfig.output = {
+        ...webpackConfig.output,
+        filename: '[name].[contenthash].js', // Main file names
+        chunkFilename: '[name].[contenthash].chunk.js', // Dynamic chunks
+      };
+
+      return webpackConfig;
+    },
+  },
