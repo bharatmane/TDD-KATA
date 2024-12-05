@@ -1,0 +1,23 @@
+module.exports = {
+  // Other Docusaurus configurations...
+  webpack: {
+    configure: (webpackConfig) => {
+      // Customize output for runtime file with hash
+      webpackConfig.output = {
+        ...webpackConfig.output,
+        filename: '[name].[contenthash].js', // Apply hash to all filenames
+        chunkFilename: '[name].[contenthash].chunk.js', // For dynamic chunks
+      };
+
+      // Ensure runtime file includes a hash
+      webpackConfig.optimization = {
+        ...webpackConfig.optimization,
+        runtimeChunk: {
+          name: (entrypoint) => `runtime.${entrypoint.name}`, // Generates runtime.<entrypointName>.<hash>.js
+        },
+      };
+
+      return webpackConfig;
+    },
+  },
+};
