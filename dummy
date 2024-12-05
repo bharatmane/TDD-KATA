@@ -56,3 +56,4 @@ webpack: {
         filename: '[name].[contenthash].js', // Main file names
         chunkFilename: '[name].[contenthash].chunk.js', // Dynamic imports
       };
+npm install @docusaurus/core@latest
