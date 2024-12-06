@@ -57,3 +57,24 @@ webpack: {
         chunkFilename: '[name].[contenthash].chunk.js', // Dynamic imports
       };
 npm install @docusaurus/core@latest
+
+
+
+
+ configureWebpack: (config, isServer, utils) => {
+    return {
+      optimization: {
+        runtimeChunk: {
+          name: () => `runtime.[contenthash]`, // Generates runtime.[contenthash].js
+        },
+      },
+      output: {
+        ...config.output,
+        filename: '[name].[contenthash].js',
+        chunkFilename: '[name].[contenthash].chunk.js',
+      },
+    };
+  },
+
+  // Other Docusaurus configurations...
+};
