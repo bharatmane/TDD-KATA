@@ -81,16 +81,4 @@ npm install @docusaurus/core@latest
 
 
 
-Mission: Deliver eGTS projects and enhancements that drive cost savings, reduce risk, and improve operational controls for BU and Ops.
-
-In-flight:
-Non-UMR bookings at Triparty
-FX Cash Order ID exhaustion support
-Dispute Commentary Automation (Phase 2)
-ASO Renovation of Bilat IM Required Rule
-Upcoming:
-Margin Call Automation (Dynamics integration for disputes, security, and anticipation calls)
-Finance 6G reporting
-Holiday logic refinements
-Dispute RAG matrix update
-Supporting upstream changes for commodities price currency
+Enhance database reliability and performance for Margin & Collateral by implementing a cloud data warehouse to consolidate reporting, optimize storage, archival, and analytics, and reduce infrastructure costs across business lines.
